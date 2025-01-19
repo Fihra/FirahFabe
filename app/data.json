@@ -1,0 +1,37 @@
+{
+    "name": "FirahFabe",
+    "headshot": "/images/headshot.jpg",
+    "navLinks": [
+        "home", "about", "works", "services", "store", "contact"
+    ],
+    "intro": [
+        "Hi! I'm Fabian, a Filipino-American based in Honolulu, Hawaiʻi. I'm an audio software developer, technical sound designer, game composer, and recording musician. I go by FirahFabe as my music alias."
+    ], 
+    "about": [
+        "I studied music at University of Hawaiʻi. My software development background is from Flatiron School. I also studied game audio from the School of Video Game Audio and game development from Indie Game Academy. "
+    ],
+    "headerRoles": [
+        "Audio Software Developer", "Technical Audio Designer", "Composer"
+    ],
+    "works": {
+        "bandcamp": {
+            "originals": [
+                
+            ],
+            "games": []
+        }
+    },
+    "store": {
+        "categories":[
+            "vst", "music", "sfx"
+        ]
+    },
+    "colorStyles": {
+        "lightGreen": "#CAFFB9",
+        "periwinkle": "#C2D4FF",
+        "cambridgeBlue": "#8FA78B",
+        "charcoal": "#324A5F",
+        "richBlack": "#0C1821"
+    },
+    "placeholderImage": "/images/lucid_flow.jpg"
+}
