@@ -1,0 +1,33 @@
+.mainLayout {
+    --tea-green: #CAFFB9;
+    --periwinkle: #C2D4FF;
+    --cambridge-blue: #8FA78B;
+    --charcoal: #324A5F;
+    --rich-black: #0C1821; 
+}
+
+.light-green {
+
+}
+
+.light-blue{
+
+}
+
+.borderline {
+    border-style: solid;
+    border-color: white;
+}
+
+@media screen and (min-width: 800px){
+    .navlinkStyles{
+        
+        
+    }
+
+    .navlinkStyles ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+    }
+}
