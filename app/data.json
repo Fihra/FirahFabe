@@ -8,11 +8,51 @@
         "Hi! I'm Fabian, a Filipino-American based in Honolulu, Hawaiʻi. I'm an audio software developer, technical sound designer, game composer, and recording musician. I go by FirahFabe as my music alias."
     ], 
     "about": [
-        "I studied music at University of Hawaiʻi. My software development background is from Flatiron School. I also studied game audio from the School of Video Game Audio and game development from Indie Game Academy. "
+        "I studied music at University of Hawaiʻi. My software development background is from Flatiron School. I also studied game audio from the School of Video Game Audio and game development from Indie Game Academy. I bounce between audio and technology, but I am still an artist at heart.",
+        "As a multi-instrumentalist, the instruments I commonly play are: Laud, Bass Guitar, Bandurria, Octavina, Kulintang. "
+    ],
+    "musicStyle": [
+        "My influences ranges from video games, drum and bass, dark synthwave, artcore, folk, world, rock, progressive metal, jazz. I always aim to mix unconventional instrumentations into my music.",
+        "My musical inspirations are Masashi Hamauzu (Unlimited SaGa, SaGa Frontier II), Yasunori Nishiki (Octopath Traveler II, Octopath Traveler), Ichika Nito, LITE, Mouse on the Keys, Aivi Tran (ikenFell), Darren Korb (Transistor, Hades), AdLibPiano (Infinite Mana), Deniz Akbulut (CrossCode)."
     ],
     "headerRoles": [
-        "Audio Software Developer", "Technical Audio Designer", "Composer"
+        "Audio Software Developer", "Technical Audio Designer", "Composer", "Recording Musician"
     ],
+    "serviceInfo": [
+        "Send me an email for any of these services I offer! Let's chat!"
+    ],
+    "services": [
+        {
+            "serviceType": "Audio Implementation",
+            "description": "I am experienced in C# for Unity and Unreal Engine Blueprinting. I utilize audio middleware (FMOD, Wwise) to implement music and audio in both of these game engines."
+        },
+        {
+            "serviceType": "Music",
+            "description": "I compose original music, and record a few live instruments depending on the instrumentation."
+        },
+        {
+            "serviceType": "Sound Design",
+            "description": "I design sound effects."
+        },
+        {
+            "serviceType": "Instrument Recordings",
+            "description": "I can record tracks for Rondalla (Bandurria, Laud, Octavina), Kulintang, and Bass Guitar with provided sheet music."
+        }
+    ],
+    "socialMediaLinks": {
+        "youtube": "https://www.youtube.com/user/FirahFabe",
+        "bluesky": "https://bsky.app/profile/firahfabe.bsky.social",
+        "bandcamp": "https://www.bandcamp.com/FirahFabe",
+        "instagram": "https://instagram.com/firahfabe",
+        "spotify": "https://open.spotify.com/artist/5MwSQ5vfamJ2RZSeP12ql5?si=HtUvdr9AQ8O7gnHVJ9FSkg",
+        "itchio": "https://firahfabe.itch.io/",
+        "github": "https://github.com/fihra",
+        "devportfolio": "https://fabian-fabro.netlify.app/",
+        "twitter": "https://x.com/firahfabe",
+        "email": "",
+        "paypal": "",
+        "venmo": ""
+    },
     "works": {
         "bandcamp": {
             "originals": [
@@ -33,5 +73,8 @@
         "charcoal": "#324A5F",
         "richBlack": "#0C1821"
     },
-    "placeholderImage": "/images/lucid_flow.jpg"
+    "placeholderImage": "/images/lucid_flow.jpg",
+    "laudImage": "/images/Comic_Con_2023_Laud.png",
+    "portfolioDay2024": "/images/portfolio_day_everything.mp4",
+    "laudAndKulintang": "/images/laud_and_kulintang.jpg"
 }
