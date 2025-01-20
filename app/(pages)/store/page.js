@@ -1,10 +1,14 @@
 'use client';
 import React, { useState } from 'react';
-
 import data from "../../data.json";
 import { FormGroup, FormControlLabel, Checkbox } from '@mui/material';
+import styles from "../../(styles)/layout.module.css";
 
 export default function Store() {
+    const [storeSize, setStoreSize] = useState({
+        storeWidth: 510,
+        storeHeight: 150
+    })
     const [filters, setFilters] = useState({
         filterButtons: {
             vst: true,
@@ -13,18 +17,18 @@ export default function Store() {
         },
         elements: [
             {
-                "elem": <iframe frameborder="0" src="https://itch.io/embed/1071218?linkback=true&amp;border_width=0&amp;dark=true" width="550" height="165"><a href="https://firahfabe.itch.io/saranay-vst">Saranay VST by FirahFabe</a></iframe>,
+                "elem": <iframe frameborder="0" src="https://itch.io/embed/1071218?linkback=true&amp;border_width=0&amp;dark=true" width={storeSize.storeWidth} height={storeSize.storeHeight}><a href="https://firahfabe.itch.io/saranay-vst">Saranay VST by FirahFabe</a></iframe>,
                 "category": "vst",
                 "isActive": true
             },
             {
-                "elem": <iframe frameborder="0" src="https://itch.io/embed/753770?linkback=true&amp;dark=true" width="552" height="167"><a 
+                "elem": <iframe frameborder="0" src="https://itch.io/embed/753770?linkback=true&amp;dark=true" width={storeSize.storeWidth} height={storeSize.storeHeight}><a 
                 href="https://firahfabe.itch.io/chivalry-fantasy-rpgadventure">Chivalry (Fantasy RPG/Adventure) by FirahFabe</a></iframe>,
                 "category": "music",
                 "isActive": true
             },
             {
-                "elem": <iframe frameborder="0" src="https://itch.io/embed/753764?linkback=true&amp;dark=true" width="552" height="167"><a href="https://firahfabe.itch.io/intense-situation">Intense Situation by FirahFabe</a></iframe>,
+                "elem": <iframe frameborder="0" src="https://itch.io/embed/753764?linkback=true&amp;dark=true" width={storeSize.storeWidth} height={storeSize.storeHeight}><a href="https://firahfabe.itch.io/intense-situation">Intense Situation by FirahFabe</a></iframe>,
                 "category": "music",
                 "isActive": true
             },
@@ -68,7 +72,7 @@ export default function Store() {
             <FormControlLabel control={<Checkbox checked={filters.filterButtons.sfx} onChange={handleChange} name="sfx"/>} label="SFX"/>
         </FormGroup>
 
-        <div id="store-container">
+        <div className={styles.storeContainer} id="store-container">
             {showItems()}
         </div>
     </main>
