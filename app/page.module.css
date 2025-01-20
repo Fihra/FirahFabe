@@ -1,3 +1,11 @@
+:root {
+  --tea-green: #CAFFB9;
+  --periwinkle: #C2D4FF;
+  --cambridge-blue: #8FA78B;
+  --charcoal: #324A5F;
+  --rich-black: #0C1821; 
+}
+
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
@@ -165,4 +173,34 @@ a.secondary {
   .logo {
     filter: invert();
   }
+}
+
+@media screen and (min-width: 800px) {
+  .headerRoles {
+    padding-bottom: 20px;
+    display: flex;
+  }
+  .headerRoles span {
+    font-size: 30px;
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .headerRoles {
+    display: block;
+  }
+
+  .headerRoles p {
+    padding-bottom: 8px;
+  }
+}
+
+.headerRoles {
+  text-align: center;
+}
+
+.headerRoles {
+  /* margin-top: 30px; */
+  color: var(--periwinkle);
 }
