@@ -1,4 +1,4 @@
-.mainLayout {
+:root {
     --tea-green: #CAFFB9;
     --periwinkle: #C2D4FF;
     --cambridge-blue: #8FA78B;
@@ -6,28 +6,93 @@
     --rich-black: #0C1821; 
 }
 
-.light-green {
-
-}
-
-.light-blue{
-
-}
-
 .borderline {
     border-style: solid;
     border-color: white;
 }
 
-@media screen and (min-width: 800px){
+.topHeader {
+    position: relative;
+}
+
+.socialMediaButtonContainer {
+    display: inline-flex;
+    gap: 10px;
+}
+ 
+.socialMediaButtonContainer span{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.navlinkStyles {
+    position: relative;
+    padding: 10px;
+}
+
+.socialMediaButtonContainer a:hover, .navlinkStyles li:hover {
+    color: var(--tea-green);
+    transform: scale(1.25);
+}
+
+.aboutSection h2 {
+    /* color: var(--tea-green); */
+}
+ 
+.servicesContainer section{
+     padding: 50px;
+     background-color:var(--charcoal);
+     margin: 40px 180px;
+}
+ 
+.servicesContainer section h3 {
+     padding-bottom: 10px;
+     color: var(--tea-green);
+}
+ 
+.storeContainer {
+     display: flex;
+     flex-wrap: wrap;
+}
+ 
+.storeContainer > div {
+     flex: 50%;
+}
+ 
+.footerSection {
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+    left: 50%;
+}
+
+@media screen and (max-width: 800px) {
     .navlinkStyles{
-        
-        
+        display: inline-flex;
+        position: absolute;
+        right: 1%;
     }
 
+    .footerSection {
+        left: 0;
+        /* bottom: auto; */
+    }
+
+    .servicesContainer section{
+        padding: 50px;
+        margin: 30px auto;
+     }
+}
+
+@media screen and (min-width: 800px){
     .navlinkStyles ul {
         list-style-type: none;
         display: flex;
         gap: 20px;
     }
+
+    .footerSection {
+        left: 10%;
+     }
 }
