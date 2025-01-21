@@ -64,6 +64,29 @@
     "store": {
         "categories":[
             "vst", "music", "sfx"
+        ],
+        "products": [
+            {
+                "embedSource": "https://itch.io/embed/1071218?dark=true",
+                "hrefLink": "https://firahfabe.itch.io/saranay-vst",
+                "name": "Saranay VST by FirahFabe",
+                "category": "vst",
+                "isActive": true
+            },
+            {
+                "embedSource": "https://itch.io/embed/753770?dark=true",
+                "hrefLink": "https://firahfabe.itch.io/chivalry-fantasy-rpgadventure",
+                "name": "Chivalry (Fantasy RPG/Adventure)",
+                "category": "music",
+                "isActive": true
+            },
+            {
+                "embedSource": "https://itch.io/embed/753764?dark=true",
+                "hrefLink": "https://firahfabe.itch.io/intense-situation",
+                "name": "Intense Situation by FirahFabe",
+                "category": "music",
+                "isActive": true
+            }
         ]
     },
     "colorStyles": {
