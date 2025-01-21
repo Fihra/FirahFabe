@@ -50,16 +50,34 @@
      padding-bottom: 10px;
      color: var(--tea-green);
 }
+
+.storeContainer h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
  
-.storeContainer {
+.storeProductContainer {
      display: flex;
      flex-wrap: wrap;
 }
  
-.storeContainer > div {
+.storeProductContainer > div {
      flex: 50%;
 }
- 
+
+.contactContainer {
+    background-color:var(--charcoal);
+    margin: 25px;
+    padding: 25px;
+}
+
+.contactTextField {
+    display: block;
+    padding: 20px;
+}
+
 .footerSection {
     position: absolute;
     bottom: auto;
@@ -72,6 +90,7 @@
         display: inline-flex;
         position: absolute;
         right: 1%;
+        top: -50%;
     }
 
     .footerSection {
@@ -82,6 +101,14 @@
     .servicesContainer section{
         padding: 50px;
         margin: 30px auto;
+     }
+
+     .storeProductContainer {
+        text-align: center;
+     }
+
+     .storeProductContainer > div {
+        padding: 10px;
      }
 }
 
