@@ -1,39 +1,48 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import data from "../../data.json";
-import { FormGroup, FormControlLabel, Checkbox } from '@mui/material';
+import { FormGroup, FormControlLabel, Checkbox, useMediaQuery } from '@mui/material';
 import styles from "../../(styles)/layout.module.css";
 
 export default function Store() {
-    const [storeSize, setStoreSize] = useState({
-        storeWidth: 510,
-        storeHeight: 150
-    })
     const [filters, setFilters] = useState({
         filterButtons: {
             vst: true,
             music: true,
             sfx: true
         },
-        elements: [
-            {
-                "elem": <iframe frameborder="0" src="https://itch.io/embed/1071218?linkback=true&amp;border_width=0&amp;dark=true" width={storeSize.storeWidth} height={storeSize.storeHeight}><a href="https://firahfabe.itch.io/saranay-vst">Saranay VST by FirahFabe</a></iframe>,
-                "category": "vst",
-                "isActive": true
-            },
-            {
-                "elem": <iframe frameborder="0" src="https://itch.io/embed/753770?linkback=true&amp;dark=true" width={storeSize.storeWidth} height={storeSize.storeHeight}><a 
-                href="https://firahfabe.itch.io/chivalry-fantasy-rpgadventure">Chivalry (Fantasy RPG/Adventure) by FirahFabe</a></iframe>,
-                "category": "music",
-                "isActive": true
-            },
-            {
-                "elem": <iframe frameborder="0" src="https://itch.io/embed/753764?linkback=true&amp;dark=true" width={storeSize.storeWidth} height={storeSize.storeHeight}><a href="https://firahfabe.itch.io/intense-situation">Intense Situation by FirahFabe</a></iframe>,
-                "category": "music",
-                "isActive": true
-            },
-        ]
     }); 
+    const [storeProducts, setStoreProducts] = useState([]);
+    const { products } = data.store;
+
+    useEffect(() => {
+        if(window.innerWidth < 800){
+            const allProducts = products.map((product) => {
+                return {
+                        "elem": <iframe frameborder="0" src={product.embedSource} width="208" height="167"><a href={product.hrefLink}>{product.name}</a></iframe>,
+                        "category": product.category,
+                        "isActive": product.isActive
+                    }
+            })
+            
+            setStoreProducts([
+                ...allProducts
+            ])
+        } else {
+            const allProducts = products.map((product) => {
+                return {
+                        "elem": <iframe frameborder="0" src={product.embedSource} width="510" height="150"><a href={product.hrefLink}>{product.name}</a></iframe>,
+                        "category": product.category,
+                        "isActive": product.isActive
+                    }
+            })
+            
+            setStoreProducts([
+                ...allProducts
+            ])
+        }
+
+    },[])
 
     const handleChange = (event) => {
         setFilters({
@@ -41,40 +50,43 @@ export default function Store() {
             filterButtons:{
                 ...filters.filterButtons,
                 [event.target.name]: event.target.checked
-            },
-            elements: [...filters.elements.map((elem) => {
-                if((elem.category === event.target.name) && (elem.isActive !== event.target.checked)){
+            }
+        })
+
+        setStoreProducts([
+            ...storeProducts.map((product) => {
+                if((product.category === event.target.name && (product.isActive !== event.target.checked))){
                     return {
-                        ...elem,
+                        ...product,
                         isActive: event.target.checked
                     }
                 }
-                return elem;
-            })]
-            
-        })
+                return product;
+            })
+        ])
     }
 
     const showItems = () => {
-        const filteredItems = filters.elements.filter(element => {
-            return element.isActive
+        const filteredItems = storeProducts.filter(element => {
+            return element.isActive;
         })
         return filteredItems.map((element, i) => <div id={i}>{element.elem}</div>);
     }
 
     return ( 
-    <main>
-        <h2>Store</h2>
-        <h4>Filter</h4>
-        <FormGroup>
-            <FormControlLabel control={<Checkbox checked={filters.filterButtons.vst} onChange={handleChange} name="vst"/> } label="VST"/>
-            <FormControlLabel control={<Checkbox checked={filters.filterButtons.music} onChange={handleChange} name="music"/>} label="Music"/>
-            <FormControlLabel control={<Checkbox checked={filters.filterButtons.sfx} onChange={handleChange} name="sfx"/>} label="SFX"/>
-        </FormGroup>
+        <main className={styles.storeContainer}>
+            <h2>Store</h2>
+            
+            <FormGroup row={true}>
+            <h4>Filter:</h4>
+                <FormControlLabel control={<Checkbox checked={filters.filterButtons.vst} onChange={handleChange} name="vst"/> } label="VST"/>
+                <FormControlLabel control={<Checkbox checked={filters.filterButtons.music} onChange={handleChange} name="music"/>} label="Music"/>
+                <FormControlLabel control={<Checkbox checked={filters.filterButtons.sfx} onChange={handleChange} name="sfx"/>} label="SFX"/>
+            </FormGroup>
 
-        <div className={styles.storeContainer} id="store-container">
-            {showItems()}
-        </div>
-    </main>
+            <div className={styles.storeProductContainer} id="store-container">
+                {showItems()}
+            </div>
+        </main>
     )
 }
