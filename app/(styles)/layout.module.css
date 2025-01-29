@@ -76,11 +76,12 @@
 .contactTextField {
     display: block;
     padding: 20px;
+    color: white;
 }
 
 .footerSection {
     position: absolute;
-    bottom: auto;
+    bottom: 0;
     width: 100%;
     left: 50%;
 }
@@ -122,4 +123,8 @@
     .footerSection {
         left: 10%;
      }
+}
+
+.submitButton {
+    width: 250px;
 }
