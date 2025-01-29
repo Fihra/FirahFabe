@@ -1,6 +1,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --tea-green: #CAFFB9;
+  --periwinkle: #C2D4FF;
+  --cambridge-blue: #8FA78B;
+  --charcoal: #324A5F;
+  --rich-black: #0C1821; 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,4 +57,20 @@ section {
 
 h2 {
   color: var(--tea-green);
+}
+
+#name-form-label, #email-form-label, #message-form-label {
+  color: var(--tea-green);
+}
+
+.mui-5h82ro-MuiInputBase-root-MuiInput-root::after {
+  border-bottom: 2px solid var(--tea-green) !important;
+}
+
+.mui-xrmkj5-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--tea-green) !important;
+}
+
+.mui-w4nesw-MuiInputBase-input-MuiOutlinedInput-input {
+  color: white !important;
 }
