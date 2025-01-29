@@ -116,6 +116,12 @@ a.secondary {
   flex-shrink: 0;
 }
 
+.homeContainer p{
+  padding-top: 12px;
+  margin: 0 auto;
+  width: 50%;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
@@ -194,6 +200,10 @@ a.secondary {
   .headerRoles p {
     padding-bottom: 8px;
   }
+
+  .homeContainer p{
+    width: auto;
+  }
 }
 
 .headerRoles {
@@ -202,5 +212,6 @@ a.secondary {
 
 .headerRoles {
   /* margin-top: 30px; */
-  color: var(--periwinkle);
+  font-weight: bold;
+  color: var(--tea-green);
 }

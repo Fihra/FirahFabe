@@ -13,11 +13,11 @@ export default function Home() {
   }
 
   const showMobileView = () => {
-    return data.headerRoles.map((role, i) => <p key={i}>{role}</p>)
+    return data.headerRoles.map((role, i) => <p key={i}>| {role} |</p>)
   }
 
   return (
-    <div>
+    <div className={styles.homeContainer}>
       <main className={styles.headerRoles}>
         {mobileView ? showDesktopView(): showMobileView()}
       </main>
