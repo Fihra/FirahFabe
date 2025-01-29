@@ -14,11 +14,11 @@ const SocialMediaLinks = () => {
     return(
         <div className={styles.socialMediaButtonContainer}>
             <span>{data.name}</span>
-            <a href={youtube}><CiYoutube size={iconSize}/></a>
-            <a href={bandcamp}><LiaBandcamp size={iconSize}/></a>
-            <a href={bluesky}><RiBlueskyLine size={iconSize}/></a>
-            <a href={instagram}><FaInstagram size={iconSize}/></a>
-            <a href={spotify}><PiSpotifyLogoLight size={iconSize}/></a> 
+            <a href={youtube} target="_blank" aria-label="youtube link"><CiYoutube size={iconSize}/></a>
+            <a href={bandcamp} target="_blank" aria-label="bandcamp link"><LiaBandcamp size={iconSize}/></a>
+            <a href={bluesky} target="_blank" aria-label="bluesky link"><RiBlueskyLine size={iconSize}/></a>
+            <a href={instagram} target="_blank" aria-label="instagram link"><FaInstagram size={iconSize}/></a>
+            <a href={spotify} target="_blank" aria-label="spotify link"><PiSpotifyLogoLight size={iconSize}/></a> 
         </div>
     )
 }
