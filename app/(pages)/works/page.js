@@ -23,18 +23,18 @@ export default function Works() {
     <main>
         <h2>Works</h2>
         <section className={styles.worksSection}>
-            <h3>Game Music</h3>
+            <h3><u>Game Music</u></h3>
             {
                 mobileView ?
                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/bLd8mvlZ5Q8?si=dWdUvn-aOHAwgbKw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 :
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/bLd8mvlZ5Q8?si=dWdUvn-aOHAwgbKw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <iframe width="560" height="315"  src="https://www.youtube.com/embed/bLd8mvlZ5Q8?si=dWdUvn-aOHAwgbKw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             }
             {showTimeStamps(gamemusic)}
         </section>
 
         <section className={styles.worksSection}>
-            <h3>Sound Design</h3>
+            <h3><u>Sound Design</u></h3>
             {
                 mobileView ?
                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/DY0kA6-T2BY?si=0JxrwFxEu9Pb8SWa" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
@@ -45,17 +45,17 @@ export default function Works() {
         </section>
 
         <section className={styles.worksSection}>
-        <h3>Original Works</h3>
+        <h3><u>Original Works</u></h3>
         {
             mobileView ?
             <iframe style={{border: 0, width: "100%", height: "42px"}} src="https://bandcamp.com/EmbeddedPlayer/album=2207066508/size=small/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="https://firahfabe.bandcamp.com/album/chill-times">Chill Times by FirahFabe</a></iframe>
             :
-            <iframe style={{border: 0, width: "400px", height: "472px"}} src="https://bandcamp.com/EmbeddedPlayer/album=2207066508/size=large/bgcol=333333/linkcol=4ec5ec/artwork=small/transparent=true/" seamless><a href="https://firahfabe.bandcamp.com/album/chill-times">Chill Times by FirahFabe</a></iframe>
+            <iframe style={{border: 0, width: "400px", height: "472px"}}  src="https://bandcamp.com/EmbeddedPlayer/album=2207066508/size=large/bgcol=333333/linkcol=4ec5ec/artwork=small/transparent=true/" seamless><a href="https://firahfabe.bandcamp.com/album/chill-times">Chill Times by FirahFabe</a></iframe>
         }
         </section>
         
         <section className={styles.worksSection}>
-        <h3>Game Music Covers</h3>
+        <h3><u>Game Music Covers</u></h3>
         {
             mobileView ?
             <iframe width="100%" height="200" src="https://www.youtube.com/embed/33xvX9Pwy60?si=p9erkYiAzqS__wdE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
