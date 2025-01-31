@@ -22,9 +22,9 @@ const Navbar = () => {
     const showDesktopNav = () => {
         return data.navLinks.map((navLink, i) => {
             if(navLink.toLowerCase() === "home"){
-                return <li key={i}><Link href="/">{navLink[0].toUpperCase() + navLink.slice(1)}</Link></li>
+                return <Link key={i} href="/">{navLink[0].toUpperCase() + navLink.slice(1)}</Link>
             } else {
-                return <li key={i}><Link href={`/${navLink}`}>{navLink[0].toUpperCase() + navLink.slice(1)}</Link></li>
+                return <Link key={i} href={`/${navLink}`}>{navLink[0].toUpperCase() + navLink.slice(1)}</Link>
             }
         })
     }
@@ -33,11 +33,13 @@ const Navbar = () => {
         return (
             <section className={styles.mobileNavMenu}>
                 <Button
+                    className={styles.menuButton}
                     id="main-button"
                     aria-controls={open ? 'main-menu' :  undefined}
                     aria-haspopup="true"
                     aria-expanded={open ? 'true' : undefined}
                     onClick={handleClick}
+                    sx={{color: "#CAFFB9", borderColor: "black"}}
                 >
                     Menu
                 </Button>
@@ -49,13 +51,18 @@ const Navbar = () => {
                     MenuListProps={{
                         'aria-labelledby': 'main-button'
                     }}
+                    sx={
+                        {
+                            ".MuiMenu-paper": { backgroundColor: data.colorStyles.charcoal, color: "white"}
+                        }
+                    }
                 >
                     {
                         data.navLinks.map((navLink, i) => {
                             if(navLink.toLowerCase() === "home"){
-                                return <li key={i}><MenuItem  onClick={handleClose}><Link href="/">{navLink[0].toUpperCase() + navLink.slice(1)}</Link></MenuItem></li>
+                                return <MenuItem key={i} onClick={handleClose}><Link href="/">{navLink[0].toUpperCase() + navLink.slice(1)}</Link></MenuItem>
                             } else {
-                                return <li key={i}><MenuItem  onClick={handleClose}><Link href={`/${navLink}`}>{navLink[0].toUpperCase() + navLink.slice(1)}</Link></MenuItem></li>
+                                return <MenuItem key={i} onClick={handleClose}><Link href={`/${navLink}`}>{navLink[0].toUpperCase() + navLink.slice(1)}</Link></MenuItem>
                             }
                         })
                     }
@@ -66,9 +73,7 @@ const Navbar = () => {
 
     return(
         <nav className={styles.navlinkStyles}>
-            <ul>
-                {mobileView ? showDesktopNav() : showMobileNav()} 
-            </ul>
+            {mobileView ? showDesktopNav() : showMobileNav()} 
         </nav>
     )
 }
