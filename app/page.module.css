@@ -185,6 +185,8 @@ a.secondary {
   .headerRoles {
     padding-bottom: 20px;
     display: flex;
+    margin: auto;
+    width: 75%;
   }
   .headerRoles span {
     font-size: 30px;
@@ -214,4 +216,14 @@ a.secondary {
   /* margin-top: 30px; */
   font-weight: bold;
   color: var(--tea-green);
+}
+
+.worksSection {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+
+.worksSection h3{
+  padding-bottom: 12px;
 }

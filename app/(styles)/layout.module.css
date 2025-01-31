@@ -6,6 +6,10 @@
     --rich-black: #0C1821; 
 }
 
+.mainBody {
+    position: relative;
+}
+
 .borderline {
     border-style: solid;
     border-color: white;
@@ -96,6 +100,9 @@
 
     .footerSection {
         left: 0;
+        right: 0;
+        width: fit-content;
+        margin-inline: auto;
         /* bottom: auto; */
     }
 
@@ -121,7 +128,7 @@
     }
 
     .footerSection {
-        left: 10%;
+        /* left: 10%; */
      }
 }
 
