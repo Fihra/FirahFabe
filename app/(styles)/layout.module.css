@@ -40,8 +40,8 @@
     transform: scale(1.25);
 }
 
-.aboutSection h2 {
-    /* color: var(--tea-green); */
+.aboutImages {
+    margin: 0 auto;
 }
  
 .servicesContainer section{
@@ -121,15 +121,14 @@
 }
 
 @media screen and (min-width: 800px){
-    .navlinkStyles ul {
-        list-style-type: none;
+    .navlinkStyles {
         display: flex;
         gap: 20px;
     }
 
-    .footerSection {
-        /* left: 10%; */
-     }
+    .itchproduct {
+        padding: 12px;
+    }
 }
 
 .submitButton {
