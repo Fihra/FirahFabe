@@ -1,11 +1,3 @@
-:root {
-  --tea-green: #CAFFB9;
-  --periwinkle: #C2D4FF;
-  --cambridge-blue: #8FA78B;
-  --charcoal: #324A5F;
-  --rich-black: #0C1821; 
-}
-
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
