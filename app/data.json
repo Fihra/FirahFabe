@@ -98,15 +98,7 @@
                 "gamelink": "https://firahfabe.itch.io/the-mysterious-gate"
             }
         ]
-        
-        },
-        "bandcamp": {
-            "originals": [
-                
-            ],
-            "games": []
-        }
-    ,
+    },
     "store": {
         "categories":[
             "vst", "music", "sfx"
@@ -144,6 +136,5 @@
     },
     "placeholderImage": "/images/lucid_flow.jpg",
     "laudImage": "/images/Comic_Con_2023_Laud.png",
-    "portfolioDay2024": "/images/portfolio_day_everything.mp4",
     "laudAndKulintang": "/images/laud_and_kulintang.jpg"
 }
