@@ -9,14 +9,14 @@
     ], 
     "about": [
         "I studied music at University of Hawaiʻi. My software development background is from Flatiron School. I also studied game audio from the School of Video Game Audio and game development from Indie Game Academy. I bounce between audio and technology, but I am still an artist at heart.",
-        "As a multi-instrumentalist, the instruments I commonly play are: Laud, Bass Guitar, Bandurria, Octavina, Kulintang. "
+        " As a multi-instrumentalist, the instruments I commonly play are: Laud, Bass Guitar, Bandurria, Octavina, Kulintang. "
     ],
     "musicStyle": [
-        "My influences ranges from video games, drum and bass, dark synthwave, artcore, folk, world, rock, progressive metal, jazz. I always aim to mix unconventional instrumentations into my music.",
+        "My influences ranges from video games, drum and bass, artcore, folk, world, rock, progressive metal, jazz, dark synthwave. I always aim to mix unconventional instrumentations into my music.",
         "My musical inspirations are Masashi Hamauzu (Unlimited SaGa, SaGa Frontier II), Yasunori Nishiki (Octopath Traveler II, Octopath Traveler), Ichika Nito, LITE, Mouse on the Keys, Aivi Tran (ikenFell), Darren Korb (Transistor, Hades), AdLibPiano (Infinite Mana), Deniz Akbulut (CrossCode)."
     ],
     "headerRoles": [
-        "Audio Software Developer", "Technical Audio Designer", "Composer", "Recording Musician"
+        "Audio Software Developer", "Technical Sound Designer", "Composer", "Recording Musician"
     ],
     "serviceInfo": [
         "Contact me for any of these services I offer! Let's chat!"
@@ -32,7 +32,7 @@
         },
         {
             "serviceType": "Sound Design",
-            "description": "I design sound effects."
+            "description": "I design sound effects. From collecting my own sound recordings, to using VST libraries, and Pure Data programming."
         },
         {
             "serviceType": "Instrument Recordings",
