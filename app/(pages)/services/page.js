@@ -1,10 +1,8 @@
 import data from "../../data.json";
 import styles from "../../(styles)/layout.module.css";
-import { Button } from "@mui/material";
 
 export default function Services() {
     const { serviceInfo, services } = data;
-    const { email } = data.socialMediaLinks;
 
     const showServices = () => {
         return services.map((service, i) => {
@@ -20,10 +18,7 @@ export default function Services() {
     return ( 
     <main className={styles.servicesContainer}>
         <h2>Services</h2>
-
         <div className={styles.servicesSection}>{serviceInfo}</div>
-        <Button variant="outlined" href={"#"}>Email</Button>
-
         {showServices()}
     </main>
     )
