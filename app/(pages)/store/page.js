@@ -17,9 +17,9 @@ export default function Store() {
 
     useEffect(() => {
         if(window.innerWidth < 800){
-            const allProducts = products.map((product) => {
+            const allProducts = products.map((product, i) => {
                 return {
-                        "elem": <iframe frameborder="0" src={product.embedSource} width="208" height="167"><a href={product.hrefLink}>{product.name}</a></iframe>,
+                        "elem": <iframe frameBorder="0" src={product.embedSource} width="208" height="167"><a key={i} href={product.hrefLink}>{product.name}</a></iframe>,
                         "category": product.category,
                         "isActive": product.isActive
                     }
@@ -29,9 +29,9 @@ export default function Store() {
                 ...allProducts
             ])
         } else {
-            const allProducts = products.map((product) => {
+            const allProducts = products.map((product, i) => {
                 return {
-                        "elem": <iframe frameborder="0" src={product.embedSource} width="510" height="150"><a href={product.hrefLink}>{product.name}</a></iframe>,
+                        "elem": <iframe frameBorder="0" src={product.embedSource} width="510" height="150"><a key={i} href={product.hrefLink}>{product.name}</a></iframe>,
                         "category": product.category,
                         "isActive": product.isActive
                     }
@@ -70,7 +70,7 @@ export default function Store() {
         const filteredItems = storeProducts.filter(element => {
             return element.isActive;
         })
-        return filteredItems.map((element, i) => <div id={i}>{element.elem}</div>);
+        return filteredItems.map((element, i) => <div key={i} className={styles.itchproduct}>{element.elem}</div>);
     }
 
     return ( 
