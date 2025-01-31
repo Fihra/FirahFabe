@@ -19,7 +19,7 @@
         "Audio Software Developer", "Technical Audio Designer", "Composer", "Recording Musician"
     ],
     "serviceInfo": [
-        "Send me an email for any of these services I offer! Let's chat!"
+        "Contact me for any of these services I offer! Let's chat!"
     ],
     "services": [
         {
@@ -54,13 +54,59 @@
         "venmo": ""
     },
     "works": {
+        "gamemusic": [
+                {
+                    "timestamp": "0:00",
+                    "title": "Drago (2025)",
+                    "gamelink": "https://firahfabe.itch.io/drago"
+                },
+                {
+                    "timestamp": "0:28",
+                    "title": "Demons of the Venta Quemada (2024) - Spooktober Game Jam",
+                    "gamelink": "https://alternativewonders.itch.io/demons-of-the-venta-quemada"
+                },
+                {
+                    "timestamp": "0:56",
+                    "title": "Boba Blunder (2024) - Global Game Jam",
+                    "gamelink": "https://porkycatstudio.itch.io/boba-blunder"
+                },
+                {
+                    "timestamp": "1:23",
+                    "title": "The Mysterious Gate (2024)",
+                    "gamelink": "https://firahfabe.itch.io/the-mysterious-gate"
+                },
+                {
+                    "timestamp": "1:53",
+                    "title": "Lucid Flow (2024) - IGU Summer Game Jam",
+                    "gamelink": "https://firahfabe.itch.io/lucid-flow"
+                }
+            ],
+        "gamesound": [
+            {
+                "timestamp": "0:00",
+                "title": "Drago (2025)",
+                "gamelink": "https://firahfabe.itch.io/drago"
+            },
+            {
+                "timestamp": "0:23",
+                "title": "Tanks (2023) - School of Video Game Audio Project",
+                "gamelink": "#"
+            },
+            {
+                "timestamp": "0:53",
+                "title": "The Mysterious Gate (2024)",
+                "gamelink": "https://firahfabe.itch.io/the-mysterious-gate"
+            }
+        ]
+        
+        },
         "bandcamp": {
             "originals": [
                 
             ],
             "games": []
         }
-    },
+    ,
     "store": {
         "categories":[
             "vst", "music", "sfx"
