@@ -5,15 +5,25 @@ import { Box, TextField, Grid2, Button, useMediaQuery} from "@mui/material";
 import styles from "../../(styles)/layout.module.css";
 import emailjs from '@emailjs/browser';
 
+
 export default function Contact() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    })
+    const initialFormState = {
+        name: "",
+        email: "",
+        message: ""
+    }
+
+    const [formData, setFormData] = useState({...initialFormState});
+
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+    const [didErrorOccur, setDidErrorOccur] = useState("");
+    const [submissionMessage, setSubmissionMessage] = useState("");
 
     useEffect(() => {
         emailjs.init(process.env.PUBLIC_KEY);
+        setIsFormSubmitted(false);
+        setSubmissionMessage("");
+        setDidErrorOccur("");
     }, []);
 
     const mobileView = useMediaQuery('(max-width:800px)');
@@ -28,7 +38,6 @@ export default function Contact() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(formData);
 
         emailjs.send(
             process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -39,12 +48,23 @@ export default function Contact() {
         .then(
             () => {
               console.log('SUCCESS!');
+              setSubmissionMessage("Message sent successfully!");
             },
             (error) => {
               console.log('FAILED...', error.text);
+              setDidErrorOccur(error);
+              setSubmissionMessage("An error occurred sending your message");
             },
           );
 
+          setFormData({...initialFormState});
+          showThankYou();
+          clearTimeout();
+
+    }
+
+    const showThankYou = () => {
+        setTimeout(() => setIsFormSubmitted(false), 2000);
     }
 
     return ( 
@@ -53,6 +73,7 @@ export default function Contact() {
 
         <form onSubmit={handleSubmit}>
         <Box className={styles.contactContainer}>
+            <span>{isFormSubmitted && didErrorOccur === "" ? submissionMessage : submissionMessage }</span>
             <Grid2 container spacing={5} direction="column">
             
             <TextField
