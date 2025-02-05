@@ -112,6 +112,20 @@
                 "isActive": true
             },
             {
+                "embedSource": "https://itch.io/embed/3300889?dark=true",
+                "hrefLink": "https://firahfabe.itch.io/chiptune-8-bit-music-pack",
+                "name": "Chiptune 8-bit Music Pack by FirahFabe",
+                "category": "music",
+                "isActive": true
+            },
+            {
+                "embedSource": "https://itch.io/embed/3300849?dark=true",
+                "hrefLink": "https://firahfabe.itch.io/chiptune-8-bit-sfx-pack",
+                "name": "Chiptune 8-bit SFX Pack by FirahFabe",
+                "category": "sfx",
+                "isActive": true
+            },
+            {
                 "embedSource": "https://itch.io/embed/753770?dark=true",
                 "hrefLink": "https://firahfabe.itch.io/chivalry-fantasy-rpgadventure",
                 "name": "Chivalry (Fantasy RPG/Adventure)",
