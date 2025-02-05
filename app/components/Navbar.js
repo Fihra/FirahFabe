@@ -4,6 +4,7 @@ import Link from "next/link";
 import data from "../data.json";
 import styles from "../(styles)/layout.module.css";
 import { Button, Menu, MenuItem, useMediaQuery } from "@mui/material";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -17,7 +18,8 @@ const Navbar = () => {
         setAnchorEl(null);
     };
 
-    const mobileView = useMediaQuery('(min-width:800px)');
+    const mobileView = useMediaQuery('(max-width:800px)');
+    // const smallerMobileView = useMediaQuery('(max-width: 345px)');
     
     const showDesktopNav = () => {
         return data.navLinks.map((navLink, i) => {
@@ -41,7 +43,11 @@ const Navbar = () => {
                     onClick={handleClick}
                     sx={{color: "#CAFFB9", borderColor: "black"}}
                 >
-                    Menu
+                    <RxHamburgerMenu 
+                        style={{color: "#CAFFB9"}}
+                        size={20}
+                    />
+                    {/* Menu */}
                 </Button>
                 <Menu
                     id="main-menu"
@@ -73,7 +79,7 @@ const Navbar = () => {
 
     return(
         <nav className={styles.navlinkStyles}>
-            {mobileView ? showDesktopNav() : showMobileNav()} 
+            {mobileView ? showMobileNav() : showDesktopNav()} 
         </nav>
     )
 }

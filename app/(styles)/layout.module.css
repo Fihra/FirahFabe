@@ -87,7 +87,7 @@
     .navlinkStyles{
         display: inline-flex;
         position: absolute;
-        right: 1%;
+        left: 80%;
         top: -50%;
     }
 
