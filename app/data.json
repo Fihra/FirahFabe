@@ -112,6 +112,13 @@
                 "isActive": true
             },
             {
+                "embedSource": "https://itch.io/embed/3328032?dark=true",
+                "hrefLink": "https://firahfabe.itch.io/oiiaoiia-cat-vst",
+                "name": "OIIAOIIA Cat VST by FirahFabe",
+                "category": "vst",
+                "isActive": true
+            },
+            {
                 "embedSource": "https://itch.io/embed/3300889?dark=true",
                 "hrefLink": "https://firahfabe.itch.io/chiptune-8-bit-music-pack",
                 "name": "Chiptune 8-bit Music Pack by FirahFabe",
